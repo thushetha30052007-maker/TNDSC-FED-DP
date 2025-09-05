@@ -1,0 +1,338 @@
+Perfect 👍 thanks for clarifying!
+
+In the code I gave you, HTML, CSS, and JavaScript are all inside one file. If you want to keep them in separate files (which is the professional way), here’s the project structure:
+
+portfolio/
+
+│── index.html
+
+│── style.css
+
+│── script.js
+
+---
+
+1️⃣ index.html
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>B. Thushetha | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <h1>B. Thushetha</h1>
+
+    <p>Bachelor of Computer Applications | Aspiring Software Developer</p>
+
+  </header>
+
+  <!-- Navigation -->
+
+  <nav>
+
+    <a href="#about">About Me</a>
+
+    <a href="#education">Education</a>
+
+    <a href="#ambition">Ambition</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <!-- About Section -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="card">
+
+      <p>Hello! I'm <b>B. Thushetha</b>, currently pursuing my <b>Bachelor’s degree in Computer Application</b> at <b>R.B. Gothi Jain College for Women</b>. I am passionate about technology and enjoy learning new programming skills. I am continuously improving and looking forward to hands-on experiences in real-world projects.</p>
+
+    </div>
+
+  </section>
+
+  <!-- Education Section -->
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+    <div class="card">
+
+      <p><b>R.B. Gothi Jain College for Women</b><br/>Bachelor of Computer Application</p>
+
+      <p><b>J.N.N. Matric Hr. Sec. School</b><br/>Completed Schooling</p>
+
+    </div>
+
+  </section>
+
+  <!-- Ambition Section -->
+
+  <section id="ambition">
+
+    <h2>Ambition</h2>
+
+    <div class="card">
+
+      <p>My ambition is to become a <b>Software Developer</b> in the IT field. I am determined to keep learning, building projects, and gaining the necessary skills to excel in this career path.</p>
+
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+
+  <section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <div class="card">
+
+      <p>If you’d like to connect, feel free to reach out!</p>
+
+      <a href="mailto:yourmail@example.com" class="btn">Email Me</a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>&copy; 2025 B. Thushetha | All Rights Reserved</p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
+---
+
+2️⃣ style.css
+
+/* === Global Styles === */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Segoe UI", sans-serif;
+
+}
+
+body {
+
+  background: #f7f9fc;
+
+  color: #333;
+
+  line-height: 1.6;
+
+}
+
+header {
+
+  background: linear-gradient(45deg, #182848, #4b6cb7);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 2rem 1rem;
+
+}
+
+header h1 {
+
+  font-size: 2.5rem;
+
+  margin-bottom: 0.5rem;
+
+}
+
+header p {
+
+  font-size: 1.2rem;
+
+}
+
+/* === Navigation === */
+
+nav {
+
+  display: flex;
+
+  justify-content: center;
+
+  background: #222;
+
+}
+
+nav a {
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 1rem;
+
+  display: block;
+
+  transition: 0.3s;
+
+}
+
+nav a:hover {
+
+  background: #4b6cb7;
+
+}
+
+/* === Sections === */
+
+section {
+
+  padding: 3rem 1.5rem;
+
+  max-width: 900px;
+
+  margin: auto;
+
+}
+
+section h2 {
+
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+
+  color: #182848;
+
+}
+
+section p {
+
+  margin-bottom: 1rem;
+
+}
+
+/* === Cards === */
+
+.card {
+
+  background: white;
+
+  padding: 1.5rem;
+
+  border-radius: 12px;
+
+  margin-bottom: 1.5rem;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+/* === Footer === */
+
+footer {
+
+  text-align: center;
+
+  padding: 1.5rem;
+
+  background: #182848;
+
+  color: white;
+
+}
+
+/* === Button === */
+
+.btn {
+
+  display: inline-block;
+
+  padding: 0.6rem 1.2rem;
+
+  margin-top: 1rem;
+
+  background: #4b6cb7;
+
+  color: white;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+}
+
+.btn:hover {
+
+  background: #182848;
+
+}
+
+---
+
+3️⃣ script.js
+
+// Smooth scroll for navigation links
+
+document.querySelectorAll('nav a').forEach(anchor => {
+
+  anchor.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href"))
+
+            .scrollIntoView({behavior: "smooth"});
+
+  });
+
+});
+
+---
+
+✅ This setup gives you:
+
+index.html → Structure of your portfolio
+
+style.css → Styling & colors
+
+script.js → JavaScript for smooth scrolling
+
+---
+
+Do you want me to add a skills section with progress bars (HTML, CSS, JS, Java, etc.) to make your portfolio look more professional?
+
